@@ -745,9 +745,9 @@ function Valley:Dropdown(properties)
     
     Items.Icon = Valley:Create("ImageLabel", { Parent = Items.Main, Position = dim2(1, -20, 0.5, 0), AnchorPoint = vec2(0, 0.5), Size = dim2(0, 12, 0, 12), BackgroundTransparency = 1, Image = "rbxassetid://10723415903", ImageColor3 = themes.preset.subtext, Rotation = -90 })
 
-    Items.DropFrame = Valley:Create("Frame", { 
+    Items.DropFrame = Valley:Create("CanvasGroup", { 
         Parent = Valley.Gui, Size = dim2(1, 0, 0, 0), Position = dim2(0, 0, 0, 0), 
-        BackgroundColor3 = themes.preset.element, Visible = false, ZIndex = 200, ClipsDescendants = true 
+        BackgroundColor3 = themes.preset.element, Visible = false, ZIndex = 200, GroupTransparency = 0 
     })
     Valley:Themify(Items.DropFrame, "element", "BackgroundColor3")
     Valley:Create("UICorner", { Parent = Items.DropFrame, CornerRadius = dim(0, 8) })
