@@ -38,17 +38,17 @@ local Notifications  = Valley.Notifications
 
 local themes = {
     preset = {
-        accent       = rgb(0, 255, 255),     -- Cyan
+        accent       = rgb(139, 0, 0),    
         
-        background   = rgb(8, 8, 8),         -- Deep Black
-        section      = rgb(10, 10, 10),      -- Slightly lifted black
-        element      = rgb(20, 20, 20),      -- Dark grey for rows
+        background   = rgb(8, 8, 8),   
+        section      = rgb(10, 10, 10),  
+        element      = rgb(20, 20, 20),  
         
-        outline      = rgb(40, 40, 40),      -- Subtle outline
-        text         = rgb(255, 255, 255),   -- White
-        subtext      = rgb(170, 170, 170),   -- Light grey
+        outline      = rgb(40, 40, 40),  
+        text         = rgb(255, 255, 255), 
+        subtext      = rgb(170, 170, 170),
         
-        tab_active   = rgb(25, 25, 25),      -- Active Tab
+        tab_active   = rgb(25, 25, 25),     
         tab_inactive = rgb(10, 10, 10),
     },
     utility = {}
