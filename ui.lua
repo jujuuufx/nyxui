@@ -288,14 +288,13 @@ function Valley:Window(properties)
     end
 
     if InputService.TouchEnabled then
-        Valley.ToggleGui = Valley:Create("ScreenGui", { Parent = CoreGui, Name = "ORGToggle", IgnoreGuiInset = true })
-        local ToggleButton = Valley:Create("ImageButton", {
+        Valley.ToggleGui = Valley:Create("ScreenGui", { Parent = CoreGui, Name = "ValleyToggle", IgnoreGuiInset = true })
+        local ToggleButton = Valley:Create("TextButton", {
             Name = "ToggleButton", Parent = Valley.ToggleGui, Position = UDim2.new(1, -80, 0, 150), Size = UDim2.new(0, 55, 0, 55),
-            BackgroundTransparency = 0.2, BackgroundColor3 = themes.preset.element, Image = "rbxthumb://type=Asset&id=117777120335047&w=150&h=150", ZIndex = 10000,
+            BackgroundTransparency = 0.2, BackgroundColor3 = rgb(0, 0, 0), Text = "V", TextColor3 = rgb(255, 0, 0), TextSize = 28, FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.Bold), ZIndex = 10000,
         })
         Valley:Create("UICorner", { Parent = ToggleButton, CornerRadius = dim(0, 16) })
-        Valley:Themify(ToggleButton, "element", "BackgroundColor3")
-        Valley:Themify(Valley:Create("UIStroke", { Parent = ToggleButton, Color = themes.preset.outline, Thickness = 1.5 }), "outline", "Color")
+        Valley:Create("UIStroke", { Parent = ToggleButton, Color = rgb(255, 0, 0), Thickness = 1.5 })
 
         local isTDrag, tDragStart, tStartPos, hasTDragged = false, nil, nil, false
         ToggleButton.InputBegan:Connect(function(input)
